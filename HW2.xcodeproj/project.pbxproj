@@ -14,6 +14,8 @@
 		450CCC731C94BD88006F0CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450CCC711C94BD88006F0CDD /* LaunchScreen.storyboard */; };
 		450CCC7E1C94BD88006F0CDD /* HW2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CCC7D1C94BD88006F0CDD /* HW2Tests.swift */; };
 		450CCC891C94BD88006F0CDD /* HW2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CCC881C94BD88006F0CDD /* HW2UITests.swift */; };
+		450CCC971C94D087006F0CDD /* addEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CCC961C94D087006F0CDD /* addEvent.swift */; };
+		450CCC991C94D0B4006F0CDD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CCC981C94D0B4006F0CDD /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		450CCC841C94BD88006F0CDD /* HW2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HW2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		450CCC881C94BD88006F0CDD /* HW2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW2UITests.swift; sourceTree = "<group>"; };
 		450CCC8A1C94BD88006F0CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		450CCC961C94D087006F0CDD /* addEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addEvent.swift; sourceTree = "<group>"; };
+		450CCC981C94D0B4006F0CDD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				450CCC681C94BD88006F0CDD /* AppDelegate.swift */,
 				450CCC6A1C94BD88006F0CDD /* ViewController.swift */,
 				450CCC6C1C94BD88006F0CDD /* Main.storyboard */,
+				450CCC961C94D087006F0CDD /* addEvent.swift */,
+				450CCC981C94D0B4006F0CDD /* Event.swift */,
 				450CCC6F1C94BD88006F0CDD /* Assets.xcassets */,
 				450CCC711C94BD88006F0CDD /* LaunchScreen.storyboard */,
 				450CCC741C94BD88006F0CDD /* Info.plist */,
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450CCC991C94D0B4006F0CDD /* Event.swift in Sources */,
 				450CCC6B1C94BD88006F0CDD /* ViewController.swift in Sources */,
 				450CCC691C94BD88006F0CDD /* AppDelegate.swift in Sources */,
+				450CCC971C94D087006F0CDD /* addEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
