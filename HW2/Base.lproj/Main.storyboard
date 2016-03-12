@@ -17,32 +17,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cam-9D-eED">
-                                <rect key="frame" x="234" y="258" width="105" height="30"/>
-                                <state key="normal" title="Add New Event">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzU-bG-kcT">
-                                <rect key="frame" x="189" y="179" width="194" height="30"/>
-                                <state key="normal" title="View event on particular day">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLA-Fv-l05">
-                                <rect key="frame" x="243" y="336" width="87" height="30"/>
-                                <state key="normal" title="Delete Event">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="B-Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNu-V1-X9J">
                                 <rect key="frame" x="227" y="105" width="103" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cam-9D-eED">
+                                <rect key="frame" x="234" y="258" width="105" height="30"/>
+                                <state key="normal" title="Add New Event">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wm6-oM-SYo" kind="show" id="kwK-FA-fQM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzU-bG-kcT">
+                                <rect key="frame" x="189" y="179" width="194" height="30"/>
+                                <state key="normal" title="View event on particular day">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UCl-4n-UIG" kind="show" id="geB-SI-l6t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLA-Fv-l05">
+                                <rect key="frame" x="243" y="336" width="87" height="30"/>
+                                <state key="normal" title="Delete Event">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aCt-D7-NHU" kind="show" id="mH3-73-g2y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.89725560900000001" blue="0.60839384379999994" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aNu-V1-X9J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Lu-7O-15d"/>
                             <constraint firstItem="Cam-9D-eED" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Th-DM-3U8"/>
@@ -55,5 +65,107 @@
             </objects>
             <point key="canvasLocation" x="305" y="395"/>
         </scene>
+        <!--Add Event-->
+        <scene sceneID="gIJ-A5-x9h">
+            <objects>
+                <viewController id="wm6-oM-SYo" customClass="addEvent" customModule="HW2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Fb-qi-LR3"/>
+                        <viewControllerLayoutGuide type="bottom" id="6gu-5H-QaH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lht-hQ-X1G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sH2-Ha-s1G">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Add Event" id="Sci-rE-ZdM">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="vku-LU-OPm">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="OKL-SL-iox"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.89725560900000001" blue="0.60839384379999994" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mus-8g-caw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="1323"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="m5r-71-f2p">
+            <objects>
+                <viewController id="aCt-D7-NHU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tH8-tY-998"/>
+                        <viewControllerLayoutGuide type="bottom" id="l1f-7V-akb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pri-rW-fGg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndK-bC-i1v">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="View or Delete Events" id="KzG-dl-kgs">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="HqN-BK-ugh">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="3ml-7B-maf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.89725560900000001" blue="0.60839384379999994" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Htw-tw-fg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="1323"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hRE-rl-mEB">
+            <objects>
+                <viewController id="UCl-4n-UIG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="thc-hh-vy6"/>
+                        <viewControllerLayoutGuide type="bottom" id="8lo-r7-Ijn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UYK-hM-i7L">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbx-Qv-Uw4">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="View Events by Date" id="OVd-uL-ZvH">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="svR-gc-Bow">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="JbA-Yr-bi7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.89725560897435896" blue="0.60839384377056271" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3b8-mD-Acc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="395"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JbA-Yr-bi7"/>
+    </inferredMetricsTieBreakers>
 </document>

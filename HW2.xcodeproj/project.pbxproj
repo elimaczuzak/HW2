@@ -16,6 +16,8 @@
 		450CCC891C94BD88006F0CDD /* HW2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CCC881C94BD88006F0CDD /* HW2UITests.swift */; };
 		450CCC971C94D087006F0CDD /* addEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CCC961C94D087006F0CDD /* addEvent.swift */; };
 		450CCC991C94D0B4006F0CDD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CCC981C94D0B4006F0CDD /* Event.swift */; };
+		450CCC9B1C94DAB9006F0CDD /* viewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CCC9A1C94DAB9006F0CDD /* viewEvent.swift */; };
+		450CCC9D1C94DAF5006F0CDD /* deleteEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CCC9C1C94DAF5006F0CDD /* deleteEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		450CCC8A1C94BD88006F0CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		450CCC961C94D087006F0CDD /* addEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addEvent.swift; sourceTree = "<group>"; };
 		450CCC981C94D0B4006F0CDD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		450CCC9A1C94DAB9006F0CDD /* viewEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewEvent.swift; sourceTree = "<group>"; };
+		450CCC9C1C94DAF5006F0CDD /* deleteEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = deleteEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			children = (
 				450CCC681C94BD88006F0CDD /* AppDelegate.swift */,
 				450CCC6A1C94BD88006F0CDD /* ViewController.swift */,
+				450CCC9A1C94DAB9006F0CDD /* viewEvent.swift */,
+				450CCC9C1C94DAF5006F0CDD /* deleteEvent.swift */,
 				450CCC6C1C94BD88006F0CDD /* Main.storyboard */,
 				450CCC961C94D087006F0CDD /* addEvent.swift */,
 				450CCC981C94D0B4006F0CDD /* Event.swift */,
@@ -263,9 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				450CCC991C94D0B4006F0CDD /* Event.swift in Sources */,
+				450CCC9B1C94DAB9006F0CDD /* viewEvent.swift in Sources */,
 				450CCC6B1C94BD88006F0CDD /* ViewController.swift in Sources */,
 				450CCC691C94BD88006F0CDD /* AppDelegate.swift in Sources */,
 				450CCC971C94D087006F0CDD /* addEvent.swift in Sources */,
+				450CCC9D1C94DAF5006F0CDD /* deleteEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
