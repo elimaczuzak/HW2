@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,22 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="B-Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNu-V1-X9J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="B-Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNu-V1-X9J">
                                 <rect key="frame" x="227" y="105" width="103" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cam-9D-eED">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cam-9D-eED">
                                 <rect key="frame" x="234" y="258" width="105" height="30"/>
                                 <state key="normal" title="Add New Event">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="wm6-oM-SYo" kind="show" id="kwK-FA-fQM"/>
+                                    <segue destination="wm6-oM-SYo" kind="show" id="kaJ-3q-8iv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzU-bG-kcT">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzU-bG-kcT">
                                 <rect key="frame" x="189" y="179" width="194" height="30"/>
                                 <state key="normal" title="View event on particular day">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,7 +42,7 @@
                                     <segue destination="UCl-4n-UIG" kind="show" id="geB-SI-l6t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLA-Fv-l05">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLA-Fv-l05">
                                 <rect key="frame" x="243" y="336" width="87" height="30"/>
                                 <state key="normal" title="Delete Event">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,8 +57,12 @@
                         <constraints>
                             <constraint firstItem="aNu-V1-X9J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Lu-7O-15d"/>
                             <constraint firstItem="Cam-9D-eED" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Th-DM-3U8"/>
+                            <constraint firstItem="Cam-9D-eED" firstAttribute="top" secondItem="BzU-bG-kcT" secondAttribute="bottom" constant="49" id="53b-GA-9uQ"/>
                             <constraint firstItem="LLA-Fv-l05" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7lx-qR-TLQ"/>
                             <constraint firstItem="BzU-bG-kcT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CV3-RG-2eF"/>
+                            <constraint firstItem="LLA-Fv-l05" firstAttribute="top" secondItem="Cam-9D-eED" secondAttribute="bottom" constant="48" id="bX3-v7-LLn"/>
+                            <constraint firstItem="aNu-V1-X9J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="cVs-vj-5I4"/>
+                            <constraint firstItem="BzU-bG-kcT" firstAttribute="top" secondItem="aNu-V1-X9J" secondAttribute="bottom" constant="50" id="tHE-d3-fio"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -77,7 +82,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sH2-Ha-s1G">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sH2-Ha-s1G">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Add Event" id="Sci-rE-ZdM">
@@ -89,19 +94,72 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Set a Time and Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2o-pZ-OwU">
+                                <rect key="frame" x="20" y="190" width="164" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OoY-Yj-9UT">
+                                <rect key="frame" x="123" y="119" width="170" height="30"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="1" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="v1o-Kb-2cZ">
+                                <rect key="frame" x="0.0" y="226" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="479520553.65681797">
+                                    <!--2016-03-13 00:09:13 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="setDate:" destination="wm6-oM-SYo" eventType="valueChanged" id="J52-fn-Qqx"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5We-Uz-aUr">
+                                <rect key="frame" x="254" y="491" width="93" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Submit!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Submit:" destination="wm6-oM-SYo" eventType="touchUpInside" id="Bym-rs-5Q5"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="0Xl-PZ-Rth"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwj-HC-B3k">
+                                <rect key="frame" x="20" y="123" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.89725560900000001" blue="0.60839384379999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5We-Uz-aUr" firstAttribute="centerX" secondItem="Lht-hQ-X1G" secondAttribute="centerX" id="Bbh-TB-1zJ"/>
+                            <constraint firstItem="sH2-Ha-s1G" firstAttribute="leading" secondItem="Lht-hQ-X1G" secondAttribute="leadingMargin" constant="-20" id="Uai-p8-12j"/>
+                            <constraint firstItem="5We-Uz-aUr" firstAttribute="top" secondItem="v1o-Kb-2cZ" secondAttribute="bottom" constant="49" id="eKg-Li-Gpc"/>
+                            <constraint firstItem="g2o-pZ-OwU" firstAttribute="top" secondItem="OoY-Yj-9UT" secondAttribute="bottom" constant="41" id="eYj-DU-qPy"/>
+                            <constraint firstItem="sH2-Ha-s1G" firstAttribute="centerX" secondItem="Lht-hQ-X1G" secondAttribute="centerX" id="gL1-MT-ZkV"/>
+                            <constraint firstItem="g2o-pZ-OwU" firstAttribute="leading" secondItem="Lht-hQ-X1G" secondAttribute="leadingMargin" id="gyi-at-43b"/>
+                            <constraint firstItem="5We-Uz-aUr" firstAttribute="centerX" secondItem="Lht-hQ-X1G" secondAttribute="centerX" id="jkd-Pg-koo"/>
+                            <constraint firstItem="v1o-Kb-2cZ" firstAttribute="centerX" secondItem="Lht-hQ-X1G" secondAttribute="centerX" id="ud7-1Q-EjO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eventDate" destination="v1o-Kb-2cZ" id="cwh-YZ-p0g"/>
+                        <outlet property="eventTitle" destination="OoY-Yj-9UT" id="pwB-hc-LFy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mus-8g-caw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="282" y="1323"/>
+            <point key="canvasLocation" x="287" y="1058"/>
         </scene>
-        <!--View Controller-->
+        <!--Delete Event-->
         <scene sceneID="m5r-71-f2p">
             <objects>
-                <viewController id="aCt-D7-NHU" sceneMemberID="viewController">
+                <viewController id="aCt-D7-NHU" customClass="deleteEvent" customModule="HW2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tH8-tY-998"/>
                         <viewControllerLayoutGuide type="bottom" id="l1f-7V-akb"/>
@@ -110,10 +168,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndK-bC-i1v">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndK-bC-i1v">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="View or Delete Events" id="KzG-dl-kgs">
+                                    <navigationItem title="View All Events" id="KzG-dl-kgs">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="HqN-BK-ugh">
                                             <connections>
                                                 <segue destination="BYZ-38-t0r" kind="show" id="3ml-7B-maf"/>
@@ -122,19 +180,41 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lhY-Vc-3yq">
+                                <rect key="frame" x="0.0" y="118" width="600" height="343"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrG-eG-2Hv">
+                                <rect key="frame" x="277" y="501" width="46" height="30"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Delete:" destination="aCt-D7-NHU" eventType="touchUpInside" id="BOT-RI-PUR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.89725560900000001" blue="0.60839384379999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ndK-bC-i1v" firstAttribute="leading" secondItem="pri-rW-fGg" secondAttribute="leadingMargin" constant="-20" id="KL9-v4-OV6"/>
+                            <constraint firstItem="KrG-eG-2Hv" firstAttribute="centerX" secondItem="pri-rW-fGg" secondAttribute="centerX" id="MvX-hv-1Ym"/>
+                            <constraint firstItem="ndK-bC-i1v" firstAttribute="centerX" secondItem="pri-rW-fGg" secondAttribute="centerX" id="qzT-Kg-JPF"/>
+                            <constraint firstItem="lhY-Vc-3yq" firstAttribute="centerX" secondItem="pri-rW-fGg" secondAttribute="centerX" id="z8V-4c-AJW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="table" destination="lhY-Vc-3yq" id="5c0-yc-0e8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htw-tw-fg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1134" y="1323"/>
         </scene>
-        <!--View Controller-->
+        <!--View Event-->
         <scene sceneID="hRE-rl-mEB">
             <objects>
-                <viewController id="UCl-4n-UIG" sceneMemberID="viewController">
+                <viewController id="UCl-4n-UIG" customClass="viewEvent" customModule="HW2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="thc-hh-vy6"/>
                         <viewControllerLayoutGuide type="bottom" id="8lo-r7-Ijn"/>
@@ -143,7 +223,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbx-Qv-Uw4">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbx-Qv-Uw4">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="View Events by Date" id="OVd-uL-ZvH">
@@ -155,10 +235,37 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="No events for this day, yet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CMA-cJ-lVq">
+                                <rect key="frame" x="63" y="354" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-vy-nsc">
+                                <rect key="frame" x="0.0" y="130" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="479520624.001643">
+                                    <!--2016-03-13 00:10:24 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="DateChosen:" destination="UCl-4n-UIG" eventType="valueChanged" id="1hP-CX-vXb"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.89725560897435896" blue="0.60839384377056271" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CMA-cJ-lVq" firstAttribute="top" secondItem="EBZ-vy-nsc" secondAttribute="bottom" constant="10" id="DYU-RE-etq"/>
+                            <constraint firstItem="vbx-Qv-Uw4" firstAttribute="centerX" secondItem="UYK-hM-i7L" secondAttribute="centerX" id="Mjz-pI-IMh"/>
+                            <constraint firstItem="vbx-Qv-Uw4" firstAttribute="leading" secondItem="UYK-hM-i7L" secondAttribute="leadingMargin" constant="-20" id="avI-Ai-WzY"/>
+                            <constraint firstItem="CMA-cJ-lVq" firstAttribute="leading" secondItem="UYK-hM-i7L" secondAttribute="leadingMargin" constant="43" id="dbA-H9-UTD"/>
+                            <constraint firstItem="EBZ-vy-nsc" firstAttribute="centerX" secondItem="UYK-hM-i7L" secondAttribute="centerX" id="lNd-RJ-kQ7"/>
+                            <constraint firstItem="EBZ-vy-nsc" firstAttribute="top" secondItem="vbx-Qv-Uw4" secondAttribute="bottom" constant="58" id="sgs-tw-CT4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="EventDate" destination="EBZ-vy-nsc" id="HIN-WQ-KdI"/>
+                        <outlet property="presentText" destination="CMA-cJ-lVq" id="J1w-zT-nLx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3b8-mD-Acc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,6 +273,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JbA-Yr-bi7"/>
+        <segue reference="OKL-SL-iox"/>
     </inferredMetricsTieBreakers>
 </document>
